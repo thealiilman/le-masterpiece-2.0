@@ -1,4 +1,3 @@
 # lemasterpiece-2.0
 
-Basically HTML, CSS and JavaScript.
-And the background!
+All the files that my website has.
