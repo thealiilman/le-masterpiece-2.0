@@ -1,3 +1,3 @@
 # lemasterpiece-2.0
 
-All the files that my website has.
+This is where the unused files live.
