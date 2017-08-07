@@ -1,1 +1,1 @@
-This is where the scripts and stylesheets live.
+This is where the scripts, images and stylesheets live.
