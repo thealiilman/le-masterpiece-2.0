@@ -5,7 +5,6 @@
 }
 
 body {
-	height: 3000px;
 	overflow-x: hidden;
 	background-color: whitesmoke;
 	color: white;
@@ -23,7 +22,7 @@ h1, a, h2 {
 }
 
 .fa {
-	text-shadow: 0px 2px 1px rgba(51, 51, 51, 0.33);
+	text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.16);
 }
 
 /*Magic starts below*/
@@ -43,7 +42,7 @@ h1, a, h2 {
 }
 
 #landing-container {
-	background-color: rgba(26, 188, 156, 0.8);
+	background-color: rgba(147, 237, 199, 0.8);
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -63,7 +62,7 @@ h1, a, h2 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	z-index: 1;
+	z-index: 10;
 }
 
 #menu {
@@ -120,6 +119,7 @@ h1, a, h2 {
 
 #landing-container h1 {
 	text-align: center;
+	color: white;
 	font-family:"Raleway", "Roboto", sans-serif;
 	font-weight: 800;
 	/*-webkit-text-stroke: 2px #333;*/
@@ -143,43 +143,28 @@ h1, a, h2 {
 	width: 100%;
 }
 
-.contents-headline, .contents-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.contents-headline h1 {
+.contents-container h1 {
 	text-align: center;
-	align-self: center;
 	letter-spacing: 5px;
 	text-shadow: 0px 3px 2px rgba(51, 51, 51, 0.16);
 }
 
-.contents-headline h1 span {
+.contents-container h1 span {
 	letter-spacing: 0;
-}
-
-.contents-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.contents-content p {
-	
 }
 
 #about-container {
 	background-color: rgba(255, 255, 255, 0.95);
-	z-index: 0;
-	box-shadow: 0px 2px 1px rgba(51, 51, 51, 0.16);
+	z-index: 3;
+	box-shadow: 0px 1px 1px rgba(51, 51, 51, 0.16);
 	color: #333;
 }
 
+/*Services*/
 
 #services-container {
-	background: linear-gradient(to top, rgba(28, 216, 210, 0.95), rgba(147, 237, 199, 0.95));
+	background-color: rgba(28, 216, 210, 0.9);
+	z-index: -1;
 }
 
 .dialogue-box {
@@ -191,13 +176,14 @@ h1, a, h2 {
 	color: #333;
 	text-align: justify;
 	padding: 16px;
+	box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.33);
 }
 
 .dialogue-box h2 {
-	color: #1abc9c;
+	color: #1CD8D2;
 	margin-top: 8px;
 	text-align: center;
-	text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.33);
+	text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.16);
 }
 
 .dialogue-box hr {
@@ -206,16 +192,186 @@ h1, a, h2 {
 	margin: 8px 0;
 }
 
+/*Portfolio*/
+#portfolio-container {
+	background-color: white;
+	color: #333;
+	z-index: 1;
+	box-shadow: 0px 0px 1px rgba(51, 51, 51, 0.48);
+}
+
+#portfolio-holder {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.port-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-size: 100% 100%;
+}
+
+.port-box h2 {
+	color: white;
+	text-shadow: 0px 2px 1px rgba(51, 51, 51, 0.33);
+	opacity: 0;
+	position: absolute;
+	font-size: 32px;
+	z-index: 1;
+}
+
+.port-box:hover h2 {
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+	transition-delay: 0.5s;
+}
+
+.port-box:not(hover) h2 {
+	transition: opacity 0.25s ease-in-out;
+	transition-delay: 0;
+}
+
+.port-box::after {
+	content: "";
+	width: 0;
+	height: inherit;
+	background-color: rgba(28, 216, 210, 0.75);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.port-box:hover::after {
+	opacity: 1;
+	width: 100%;
+}
+
+.port-box:first-child {
+	background-image: url("tlphigh.png");
+}
+
+.port-box:last-child {
+	background-image: url("myfirstwebsite2%20-%20Copy.jpg");
+}
+
+/*Contact*/
+#contact-container {
+	background: linear-gradient(to top, rgba(28, 216, 210, 0.9), rgba(147, 237, 199, 0.9));
+	/*background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5));
+	background-color: rgba(26, 188, 156, 0.8);*/
+	flex-direction: column;
+	z-index: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+label {
+	font-family: "Raleway", "Roboto", sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+input, textarea {
+	font-family: "Raleway", "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    outline: none;
+	border: none;
+	border-radius: 4px;
+	padding: 8px;
+    background-color: white;
+	transition: box-shadow 0.3s;
+}
+
+textarea {
+	resize: vertical;
+}
+
+::-webkit-input-placeholder {
+	color: #333;
+	opacity: 0.5;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#formbtn {
+	font-family: "Raleway", "Roboto", sans-serif;
+	font-weight: 800;
+	color: white;
+	background-color: #333;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: color .25s ease-in-out, background-color .25s ease-in-out;
+}
+
+#formbtn:hover {
+	color: #1abc9c;
+	background-color: white;
+}
+
+/*Footer*/
+footer {
+	width: 100%;
+	height: auto;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	color: #333;
+}
+
+footer h2 {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+footer a {
+	color: #1CD8D2;
+}
+
+footer .fa {
+	padding: 0 16px;
+	cursor: pointer;
+	transition: color .5s ease-in-out;
+}
+
+footer .fa:hover {
+	color: #1abc9c;
+}
 
 /*Media Queries*/
+
 @media only screen and (max-width: 392px) {
 	#landing-container h1 {
 		font-size: 48px !important;
 	}
 	
 	#about-container p {
-		width: 275px;
 		text-align: left;
+	}
+	
+	.dialogue-box {
+		width: 250px !Important;
+	}
+	
+	.dialogue-box p {
+		text-align: center !important;
 	}
 }
 
@@ -254,24 +410,76 @@ h1, a, h2 {
 	/*Contents*/
 	.contents-container {
 		flex-direction: column;
+		padding: 32px;
 	}
 	
-	.contents-headline, .contents-content {
+	.contents-container h1, .contents-container p {
 		width: 100%;
 	}
 	
-	.contents-headline {
-		padding: 24px;
-	}
-	
-	.contents-content {
-		padding: 16px;
+	.contents-container p {
+		margin-top: 16px;
 		text-align: justify;
 	}
 	
 	/*Services*/
 	.dialogue-box {
-		width: 250px;
+		width: 350px;
+		margin-top: 16px;
+	}
+	
+	.dialogue-box p {
+		margin-top: 0;
+	}
+	
+	.dialogue-box:nth-child(even) {
+		order: 1;
+	}
+	
+	/*Portfolio*/
+	#portfolio-container {
+		padding: 0;
+	}
+	
+	#portfolio-container h1 {
+		padding: 32px 32px 0 32px;
+	}
+	
+	#portfolio-holder {
+		flex-direction: column;
+		margin-top: 16px;
+		margin-bottom: 32px;
+	}
+	
+	.port-box {
+		height: 400px;
+		width: 100%;
+	}
+	
+	/*Contact*/
+	form {
+		width: 100%;
+		margin-top: 16px;
+		flex-direction: column;
+	}
+	
+	.form-field {
+		margin-top: 16px;
+	}
+	
+	.form-field:first-child {
+		margin: 0;
+	}
+	
+	#formbtn {
+		margin-top: 16px;
+		padding: 12px;
+	}
+	
+	/*Footer*/
+	footer {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }
 
@@ -314,14 +522,13 @@ h1, a, h2 {
 	}
 	
 	/*Contents*/
-	.contents-headline, .contents-content {
-		height: 100%;
+	.contents-container {
 		padding: 64px;
-		text-align: justify;
+		justify-content: center;
 	}
 	
-	.contents-content p {
-		max-width: 580px;
+	.contents-container p {
+		max-width: 840px;
 	}
 	
 	/*About*/	
@@ -329,17 +536,66 @@ h1, a, h2 {
 		flex-direction: row;
 	}
 	
-	/*#about-container .contents-headline, #about-container .contents-content {
-		padding: 64px;
-	}*/
+	#about-container h1 {
+		margin-right: 30px;
+	}
+	
+	#about-container p {
+		font-size: 18px;
+	}
 	
 	/*Services*/
 	#services-container {
-		flex-direction: row-reverse;
+		flex-direction: column;
 	}
 	
 	.dialogue-box {
-		width: 300px;
+		width: 500px;
+		margin-top: 30px;
+	}
+	
+	.dialogue-box:nth-child(even) {
+		order: 1;
+	}
+	
+	/*Portfolio*/
+	#portfolio-container {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	
+	#portfolio-holder {
+		flex-direction: column;
+		margin-top: 30px;
+	}
+	
+	.port-box {
+		height: 400px;
+		width: 100%;
+	}
+	
+	/*Contact*/
+	form {
+		margin-top: 30px;
+		width: 100%;
+	}
+	
+	.form-field {
+		margin-top: 30px;
+	}
+	
+	.form-field:first-child {
+		margin: 0;
+	}
+	
+	#formbtn {
+		margin-top: 30px;
+		padding: 16px;
+	}
+	
+	/*Footer*/
+	footer {
+		flex-direction: row;
 	}
 }
 
@@ -350,5 +606,44 @@ h1, a, h2 {
 	
 	#landing-container h1 {
 		font-size: 100px;
+	}
+	
+	#portfolio-holder {
+		flex-direction: row;
+		margin-top: 30px;
+	}
+	
+	.port-box {
+		height: 400px;
+		width: 50%;
+	}
+	
+	/*Contact*/
+	form {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	#services-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	#services-container h1 {
+		width: 100%;
+	}
+	
+	.dialogue-box {
+		width: 300px;
+		margin-right: 25px;
+	}
+	
+	.dialogue-box:last-child {
+		margin-right: 0;
+	}
+	
+	.dialogue-box:nth-child(even) {
+		order: 0;
 	}
 }
