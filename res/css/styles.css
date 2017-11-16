@@ -101,7 +101,7 @@ h2 {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: -205px;
+  margin-top: -207px;
   text-align: center;
   transition: margin-top 0.5s ease-in-out, background-color 0.25s;
   overflow-x: hidden;
