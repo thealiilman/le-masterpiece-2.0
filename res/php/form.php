@@ -9,6 +9,4 @@
     $headers = "From: ".$name." ".$email;
 
     mail($to, $subject, $message, $headers);
-    header("Location: index.html");
-
 ?>
