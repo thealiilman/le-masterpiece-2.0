@@ -43,7 +43,7 @@ $(function () {
 	$('#formbtn').click(function(event) {
 		event.preventDefault();
     $.ajax({
-      url: 'form.php',
+      url: '../form.php',
       type: 'POST',
       data: {
         name: $("#form-name").val(),
