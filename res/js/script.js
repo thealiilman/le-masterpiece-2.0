@@ -40,11 +40,12 @@ $(function () {
 			scrollTop: $("#contact-container").offset().top - 48
 		}, 2000);
 	});
+	
 	$('#formbtn').click(function(event) {
 		event.preventDefault();
     $.ajax({
-      url: '../form.php',
-      type: 'POST',
+      url: "../form.php",
+      type: "POST",
       data: {
         name: $("#form-name").val(),
         email: $("#form-email").val(),
@@ -52,7 +53,7 @@ $(function () {
         message: $("#form-message").val()
       },
       success: function() {
-          alert('Email Sent');
+          alert("Email has been sent!");
       }       
     });
   });
