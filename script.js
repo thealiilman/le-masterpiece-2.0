@@ -54,7 +54,7 @@ $(function () {
       },
       success: function() {
           alert("Email has been sent!");
-      }       
+      }
     });
   });
 });
