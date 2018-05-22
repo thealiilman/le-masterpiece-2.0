@@ -454,9 +454,6 @@ footer .fa:hover {
   .dialogue-box p {
     margin-top: 0;
   }
-  .dialogue-box:nth-child(even) {
-    order: 1;
-  }
   /*Portfolio*/
   #portfolio-container {
     padding: 0;
@@ -552,9 +549,6 @@ footer .fa:hover {
     width: 500px;
     margin-top: 30px;
   }
-  .dialogue-box:nth-child(even) {
-    order: 1;
-  }
   /*Portfolio*/
   #portfolio-container {
     flex-direction: column;
@@ -621,11 +615,5 @@ footer .fa:hover {
   .dialogue-box {
     width: 300px;
     margin-right: 25px;
-  }
-  .dialogue-box:last-child {
-    margin-right: 0;
-  }
-  .dialogue-box:nth-child(even) {
-    order: 0;
   }
 }
