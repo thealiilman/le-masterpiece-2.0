@@ -170,7 +170,6 @@ h2 {
 
 #services-container {
   background-color: rgba(28, 216, 210, 0.9);
-  z-index: -1;
 }
 
 .dialogue-box {
@@ -258,14 +257,6 @@ h2 {
 }
 
 .port-box:first-child {
-  background-image: url("../images/random-quote.png")
-}
-
-.port-box:nth-child(2) {
-  background-image: url("../images/greater-manchester.png");
-}
-
-.port-box:nth-child(3) {
   background-image: url("../images/tlphigh.png");
 }
 
@@ -615,5 +606,8 @@ footer .fa:hover {
   .dialogue-box {
     width: 300px;
     margin-right: 25px;
+  }
+  .dialogue-box:last-child {
+    margin-right: 0;
   }
 }
